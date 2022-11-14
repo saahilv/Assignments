@@ -13,6 +13,7 @@
 <!-- Adding the Body to the page in the head section below -->
 
 <body>
+
     <!-- Adding a navigation section -->
     <nav>
         <!-- Navigation section is an unordered list -->
@@ -23,13 +24,15 @@
         </ul>
     </nav>
     <!-- The first section, using marquee for a fancy banner -->
-    <h1><marquee>A Conventional 'Hello World' from Saahil Vashishta</marquee></h1>
+    <h1>
+        <marquee>A Conventional 'Hello World' from Saahil Vashishta</marquee>
+    </h1>
     <!-- Adding an image to the page -->
     <img src="Media/FancyDSLR.png" alt="My Wife knows how to use a camera" width="470" height="400">
     <!-- The second section -->
-    <h2>About Me</h2>
+    <h2 class="SectionTitles">About Me</h2>
     <p>
-        <a href="https://twitter.com/twitter/status/1445078208190291973?lang=en" title="Tweet">Hello
+        <a href="https://twitter.com/twitter/status/1445078208190291973?lang=en" target="_blank" title="Tweet">Hello
             literally everyone!</a> Just kidding, we don't like Twitter anymore. My wife was a software engineer at
         Twitter one day and the next day Thanos (aka Musk) snapped his fingers.
         <br>
@@ -50,8 +53,8 @@
         <br>
     </p>
     <!-- Adding the 3rd section, which is a table -->
-    <h3>FAQ</h3>
-    <table>
+    <h3 class="SectionTitles">FAQ</h3>
+    <table class="center">
         <caption>FAQ: Questions for me</caption>
         <thead>
             <tr>
@@ -63,13 +66,14 @@
         <tbody>
             <tr>
                 <td>Who is your family?</td>
-                <td>I have a wonderful wife, parents and a brother. You can find out more about them in the link provided</td>
-                <td><a href="FamilyAboutPage.html" title="About family">FamilyAboutLink</a></td>
+                <td>I have a wonderful wife, parents and a brother. You can find out more about them in the link
+                    provided</td>
+                <td><a href="FamilyAboutPage.html" target="_blank" title="About family">FamilyAboutLink</a></td>
             </tr>
             <tr>
                 <td>Where have you lived?</td>
                 <td>Chandigarh,(India),New Delhi (India), West Lafeyette(Indiana), Seattle(WA) </td>
-                <td><a href="Locations.html" title="Saahil's Locations">LocationsLink</a></td>
+                <td><a href="Locations.html" target="_blank" title="Saahil's Locations">LocationsLink</a></td>
             </tr>
             <tr>
                 <td>What are your hobbies?</td>
@@ -79,10 +83,12 @@
         </tbody>
         <tfoot>
             <tr>
-                <td class ="center" colspan ="3">Last updated 11/6/2022.</td>
+                <td class="center" colspan="3">Last updated 11/6/2022.</td>
             </tr>
         </tfoot>
     </table>
+    <br>
+
 </body>
 
 </html>
