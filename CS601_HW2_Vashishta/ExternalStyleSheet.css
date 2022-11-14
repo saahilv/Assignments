@@ -70,10 +70,12 @@ table {
     padding: 5px;
 
 }
+
 /*Styling the table*/
 table th {
     padding: 5px 10px;
 }
+
 /*Styling the table*/
 table td {
     padding: 5px 10px;
@@ -84,18 +86,19 @@ nav {
     border-color: bisque;
     border-style: double;
     background-image: url("media/nav.jpg");
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;
     padding-inline-start: 20px;
     padding-inline-end: 20px;
     float: left;
     width: 100%;
 }
+
 /*Styling the bullets in nav*/
 nav ul {
     list-style: none;
 }
 
-nav ul li a{
+nav ul li a {
     float: left;
     display: inline;
     padding: 10px;
