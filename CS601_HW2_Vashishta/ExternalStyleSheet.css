@@ -108,3 +108,25 @@ nav ul li a {
 nav ul li a:hover {
     background-color: whitesmoke;
 }
+/*Home page button inspired from : https://www.joshwcomeau.com/animation/3d-button/*/
+.WorkButton {
+    background: rgb(3, 0, 163);
+    border-radius: 12px;
+    border:0.2em;
+    padding: 0.2em;
+    cursor: pointer;
+    outline-offset: 4px;
+  }
+  .front {
+    display: block;
+    padding: 14px 44px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    background: rgb(0, 64, 240);
+    color: white;
+    transform: translateY(-8px);
+  }
+
+  .WorkButton:active .front {
+    transform: translateY(-1px);
+  }
