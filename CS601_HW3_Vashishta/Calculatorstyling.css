@@ -1,0 +1,9 @@
+/*Adding general style for the whole body*/
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3em;
+    font-weight: 600;
+    margin: 0.5em;
+    background-image: url("Media/Calculator.jpg");
+    color: black
+}

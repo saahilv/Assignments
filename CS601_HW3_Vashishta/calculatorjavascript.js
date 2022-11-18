@@ -26,7 +26,7 @@ function addNumbers() {
 }
 var sum_numbers = addNumbers();
 //Adding conditional logic to provide alerts based on numeric value of sum
-if (sum_numbers >= 10) {
+if (sum_numbers > 10) {
     alert("That is a big number.");
 } else {
     alert("That is a small number.");
