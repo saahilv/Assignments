@@ -1,0 +1,21 @@
+{
+    "my_college_degrees": [
+        {
+            "college": {
+                "School": "Purdue University",
+                "Major": "Mechanical Engineering",
+                "Type": "BS",
+                "Year_Conferred": "2017"
+            }
+        },
+        {
+            "college": {
+                "School": "Boston University",
+                "Major": "Software Development",
+                "Type": "MS",
+                "Year_Conferred": "2023"
+            }
+        }
+
+    ]
+}

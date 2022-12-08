@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Adding the Title to the page in the head section below -->
+<head>
+    <title>Student Form</title>
+    <meta charset="UTF-8">
+    <link href="formStyle.css" rel="stylesheet">
+    <script src="formScript.js"></script>
+</head>
+<!-- Adding the body of the page in the section below -->
+<body>
+    <!-- Adding title -->
+    <h1>Student Form: Fall 2022 (O2)</h1>
+    <!-- Adding form -->
+    <form name="studentForm" id="studentForm" method="post" action="https://cs601.bu-course-examples.com/hw4/380a98f5-5191-496f-8aa1-7acc1da83cc5">
+        <!-- Adding the text fields (first name) -->
+        <p> Enter your first name: (Required)
+            <input type="text" name="firstName" id="firstName" minlength="2" required pattern="[a-zA-Z]+" onchange="return validateStudentForm(true, false, false);">
+        </p>
+        <!-- Adding the first error message -->
+        <span id="firstNameError"></span>
+        <br>
+        <!-- Adding the text fields (last name) -->
+        <p> Enter your last name: (Required)
+            <input type="text" name="lastName" id="lastName" minlength="2" required pattern="[a-zA-Z]+" onchange="return validateStudentForm(false, true, false);">
+        </p>
+        <!-- Adding the second error message -->
+        <span id="lastNameError"></span>
+        <br>
+        <!-- Adding the text fields (facilitator name) -->
+        <p> Enter the name of your facilitator: (Required)
+            <input type="text" name="facilitator" id="facilitator" minlength="1" required onchange="return validateStudentForm(false, false, true);">
+        </p>
+        <!-- Adding the third error message -->
+        <span id="facilitatorError"></span>
+        <br>
+        <!-- Adding radio buttons -->
+        <fieldset> <legend>Select your student status: </legend>
+            <input type="radio" id = "radio1" name="radioFullTimeWorking" value="radioFullTimeWorking">Full-time student and working <br>
+            <input type="radio" id = "radio2" name="radioFullTimeNotWorking" value="radioFullTimeNotWorking">Full-time student and not working <br>
+            <input type="radio" id = "radio3" name="radioPartTimeWorking" value="radioPartTimeWorking">Part-time student and working <br>
+            <input type="radio" id = "radio4" name="radioPartTimeNotWorking" value="radioPartTimeNotWorking">Part-time student and not working <br>
+        </fieldset> <br>
+        <!-- Adding check boxes -->
+        <fieldset> <legend>Please choose one or more of your career interests: </legend>
+            <input type="checkbox" id = "cb1" name="webDesigner" value="webDesigner">Web Designer <br>
+            <input type="checkbox" id = "cb2" name="frontEndDev" value="frontEndDev">Front-End Developer <br>
+            <input type="checkbox" id = "cb3" name="backEndDev" value="backEndDev">Back-End Developer <br>
+            <input type="checkbox" id = "cb4" name="fullStackDev" value="fullStackDev">Full-stack Developer <br>
+            Other (please specify): <input type="text" name="otherChoice" id="otherChoice"> <br>
+        </fieldset>
+        <br>
+        <p><input type="submit" id="submitBt" value="Submit"></p>
+
+    </form>
+    
+</body>
+</html>

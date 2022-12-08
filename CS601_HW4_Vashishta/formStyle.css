@@ -1,0 +1,22 @@
+/*Adding general style for the whole body*/
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    margin: 3em;
+    background-color:lavender;
+    color: black;
+    text-align: center;
+}
+/*Making the text box red if input is invalid*/
+input:invalid {
+    border: 2px solid red;
+}
+/*Keeping the text box black if input is valid*/
+input:valid {
+    border: 2px solid black;
+}
+/*Setting color for error message*/
+span {
+    color:red;
+}
