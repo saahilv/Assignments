@@ -130,3 +130,16 @@ nav ul li a:hover {
   .WorkButton:active .front {
     transform: translateY(-1px);
   }
+
+  /*Making the text box red if input is invalid*/
+input:invalid {
+    border: 2px solid red;
+}
+/*Keeping the text box black if input is valid*/
+input:valid {
+    border: 2px solid black;
+}
+/*Setting color for error message*/
+span {
+    color:red;
+}

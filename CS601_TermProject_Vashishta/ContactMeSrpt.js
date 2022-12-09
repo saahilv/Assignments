@@ -1,86 +1,117 @@
 // Validation for first name
-function validateFirstName(showError) {
-    var firstName = document.getElementById("firstName");
+function validateName(showError) {
+    var Name = document.getElementById("Name");
     // alpha character regex
-    const re = new RegExp('^[a-zA-Z]+$');
+    const re = new RegExp('^[a-zA-Z ]+$');
     var errorMsg = "";
     var valid = true;
     // conditions to check min number of characters
-    if (firstName.value.length < 2) {
-        errorMsg = "The first name should be at least 2 characters long";
+    if (Name.value.length < 2) {
+        errorMsg = "The name should be at least 2 characters long";
         valid = false;  
     } 
     // conditions to check all characters are alphabets
-    else if (!re.test(firstName.value)) { 
-        errorMsg = "The first name should only contian alpha characters";
+    else if (!re.test(Name.value)) { 
+        errorMsg = "The first name should only contain alpha characters";
         valid = false;  
     }
     // Error message update
     if(showError){
-        firstNameError.textContent = errorMsg;
+        NameError.textContent = errorMsg;
+    }
+
+    return valid;
+}
+// Validation for age 
+function validateAge(showError) {
+    var age = document.getElementById("Age");
+    var errorMsg = "";
+    var valid = true;
+    // Making sure negative numbers and PG13 validation is present
+    if (age.value < 13) {
+        errorMsg = "The vistor should be at least 13 years old, this website is PG 13";
+        valid = false;
+    }
+    //Max age validation
+    if (age.value > 122) {
+        errorMsg = "Either you have broken the max age world record, or you're lying to me!";
+        valid = false;
+    }
+
+    // Error message update
+    if (showError) {
+        AgeError.textContent=errorMsg;
     }
 
     return valid;
 }
 // Validation for last name
-function validateLastName(showError) {
-    var lastName = document.getElementById("lastName");
+function validateLocationCity(showError) {
+    var cityName = document.getElementById("city");
     // alpha character regex
-    const re = new RegExp('^[a-zA-Z]+$');
+    const re = new RegExp('^[a-zA-Z ]+$');
     var errorMsg = "";
     var valid = true;
     // conditions to check min number of characters
-    if (lastName.value.length < 2) {
-        errorMsg = "The last name should be at least 2 characters long";
+    if (cityName.value.length < 2) {
+        errorMsg = "The city name should be at least 2 characters long";
         valid = false;   
     } 
     // conditions to check all characters are alphabets
-    else if (!re.test(lastName.value)) { 
-        errorMsg = "The last name should only contian alpha characters";
+    else if (!re.test(cityName.value)) { 
+        errorMsg = "The city name should only contain alpha characters";
         valid = false;  
     }
     // Error message update
     if (showError) {
-        lastNameError.textContent=errorMsg;
+        CityError.textContent=errorMsg;
     }
     
     return valid;
 }
 // Validation for facilitator name
-function validateFacilitatorName(showError) {
-    var facilitorNames = ['jen', 'josh', 'chris', 'christian', 'behdad'];
-    var facilitatorElement = document.getElementById("facilitator");
-    var facilitatorName = facilitatorElement.value.toLowerCase();
-    var valid = true;
+function validateLocationCountry(showError) {
+    var countryName = document.getElementById("country");
+    // alpha character regex
+    const re = new RegExp('^[a-zA-Z ]+$');
     var errorMsg = "";
-    //Checking to see if names in text field match the correct names
-    if (!facilitorNames.includes(facilitatorName)) {
-        errorMsg = "Please enter a valid facilitator name";
-        valid = false; 
+    var valid = true;
+    // conditions to check min number of characters
+    if (countryName.value.length < 2) {
+        errorMsg = "The city name should be at least 2 characters long";
+        valid = false;   
     } 
+    // conditions to check all characters are alphabets
+    else if (!re.test(countryName.value)) { 
+        errorMsg = "The country name should only contain alpha characters";
+        valid = false;  
+    }
     // Error message update
     if(showError){
-        facilitatorError.textContent= errorMsg;
+        CountryError.textContent= errorMsg;
     }
     
     return valid;
 }
 
 //Validation function to show errors and disable/enable submit
-function validateContactForm(validateName, validateAge, validateLocationCity,validateLocationCountry) {
+function validateContactForm(validName, validAge, validLocationCity,validLocationCountry) {
     //Declaration of necessary variables
     var submitButton = document.getElementById("submitBt");
         
-    //Check conditions of first name and update form validation
-    var validFirst = validateFirstName(validateFirst);
+    //Check conditions of name and update form validation
+    var validName = validateName(validName);
 
-    //Check conditions of last name and update form validation
-    var validLast = validateLastName(validateLast);
+     //Check conditions of age and update form validation
+     var validAge = validateAge(validAge);
 
-    //Check conditions of facilitator name and update form validation
-    var validFacilitator = validateFacilitatorName(validateFacilitator);
+    //Check conditions of city and update form validation
+    var validLocationCity = validateLocationCity(validLocationCity);
+
+    //Check conditions of country name and update form validation
+    var validLocationCountry = validateLocationCountry(validLocationCountry);
     //Disable button for invalid form values
-    if (validFirst && validLast && validFacilitator) {
+    if (validName && validAge && validLocationCity && validLocationCountry) {
         submitButton.disabled=false;
     }
     else {
