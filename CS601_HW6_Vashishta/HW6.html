@@ -5,11 +5,18 @@
 <!-- Adding the css and javascript-->
     <title>Image Fade</title>
     <meta charset="UTF-8">
-    <script src="imageControl.js"></script>
+    <script src="https://unpkg.com/vue@3" ></script>
+    <script src="imageControl.js" type ="module"></script>
+    <link href="image.css" rel="stylesheet">
 </head>
 <!-- Adding the body of the page in the section below -->
 <body>
-    <!-- Adding the original image -->
-    <img id="flowerImage" src="Media/Flower1.png" width="200" height="340" onmouseover="return changeImage()">
+    <!--Include Vue-->  
+    <div id ="app">
+        <p>Flower is in {{ imageSource.alt }} stage</p>
+        <transition name="fade">
+            <img id="flowerImage" :alt-text="imageSource.alt" :src="imageSource.src" width="200" height="340" @mouseover="changeImage"/>
+        </transition>
+    </div>
 </body>
 </html>

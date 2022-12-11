@@ -1,15 +1,34 @@
+const {createApp} = Vue
+
 const sourceImg = {
-    0:  "Media/Flower1.png",
-    1:  "Media/Flower2.png",
-    2:  "Media/Flower3.png",
-    3:  "Media/Flower4.png",
+    0:  { 
+        src: "Media/Flower1.png",
+        alt: "budding"
+    },
+    1:  {
+        src: "Media/Flower2.png",
+        alt: "early bloom"
+    },
+    2:  {
+        src: "Media/Flower3.png",
+        alt: "partial bloom"
+    },
+    3:  {
+        src: "Media/Flower4.png",
+        alt: "full bloom"
+    }
 }
 
-var currSource = 0;
-
-function changeImage() {
-    var src = document.getElementById("flowerImage").src;
-    currSource = (currSource + 1) % 4;
-    var i = sourceImg[currSource];
-    document.getElementById("flowerImage").src = i;
-}
+createApp({
+    data() {
+        return {
+            count: 0,
+            imageSource: sourceImg[0],
+        }
+    }, methods: {
+        changeImage() {
+            this.count = (this.count + 1) % 4;
+            this.imageSource = sourceImg[this.count];
+        } 
+    }
+}).mount('#app')

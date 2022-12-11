@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <!-- Adding the Title to the page in the head section below -->
 
 <head>
     <title>Saahil Vashishta - Leave your Mark</title>
-    <meta charset="UTF-8">
+    <meta charset=UTF-8">
     <link href="ExternalStyleSheet.css" rel="stylesheet">
     <script src="ContactMeSrpt.js"></script>
 </head>
@@ -22,12 +21,13 @@
             <li><a href="Locations.html">Locations</a></li>
             <li><a href ="ContactMe.html">Leave your Mark</a></li>
             <li><a href ="Resume.html">Résumé</a></li>
+            <li><a href ="HobbyLobby.html">Hobby Lobby</a></li>
         </ul>
     </nav>
     <!-- The first section -->
     <h1 class="SectionTitles">Leave your Mark</h1>
     <!-- Adding Web Based Form -->
-    <form name="studentForm" id="studentForm" method="post" action=>
+    <form name="contactForm" id="contactForm" onsubmit="return postButton()">
         <!-- Adding and validating the text fields (Visitor name) -->
         <p> Enter your name:
             <input type="text" name="Name" id="Name" minlength="2" required pattern="[a-zA-Z ]+" onchange="return validateContactForm(true, false, false, false);">
@@ -41,6 +41,12 @@
         </p>
         <!-- Adding the second error message -->
         <span id="AgeError"></span>
+        <br>
+        <!--Adding your zipcode and validating it-->
+        <p>Enter your Zipcode: 
+            <input type="number" name="Zip" id="Zip" minlength="5" required pattern="[0-9]+" min="0" max="99999" onchange="return fetchLocationData();">
+        </p>
+        <span id="ZipError"></span>
         <br>
         <!-- Adding and validating the text fields (Visitor Location City)-->
         <p> Enter your location city:

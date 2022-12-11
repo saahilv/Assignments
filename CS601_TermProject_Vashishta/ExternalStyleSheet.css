@@ -56,7 +56,11 @@ ol {
     padding: 0;
 }
 
-li {
+.location {
+    background-color: black;
+}
+
+.location li {
     text-align: center;
     list-style-position: inside;
 }
@@ -83,7 +87,7 @@ table td {
 
 /*Styling the navigation pane*/
 nav {
-    border-color: bisque;
+    border-color: gray;
     border-style: double;
     background-image: url("media/nav.jpg");
     background-repeat: no-repeat;
@@ -142,4 +146,61 @@ input:valid {
 /*Setting color for error message*/
 span {
     color:red;
+}
+
+.gallary {
+    width: 100%;
+} 
+
+/* TODO: WHY IS THE LAST COLUMN NOT BEING POPULATED */
+/* hobby gallary settings */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+.image-gallery > li {
+    flex: 23%;
+    max-width: 25%;
+    padding: 0 4px;
+    list-style: none;
+}
+.image-gallery li img {
+    vertical-align: middle;
+    width: 100%;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.gallery-message {
+    position: absolute;
+    top: 0;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    overflow-wrap: break-word;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.v-enter-active,
+.v-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+    opacity: 0.6;
+}
+
+.family p {
+    background-color: black;
 }
